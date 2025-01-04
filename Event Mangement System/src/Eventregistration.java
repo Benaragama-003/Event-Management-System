@@ -34,19 +34,26 @@ public class Eventregistration extends javax.swing.JFrame {
         visit_label = new javax.swing.JLabel();
         site_button = new javax.swing.JButton();
         registration_button = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         location_search.setText("Location");
+        getContentPane().add(location_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 54, 129, -1));
 
         search_button.setBackground(new java.awt.Color(0, 0, 0));
         search_button.setForeground(new java.awt.Color(255, 255, 255));
         search_button.setText("Search");
+        getContentPane().add(search_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 54, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(634, 106, -1, -1));
 
         description.setColumns(20);
         description.setRows(5);
         description.setText("A breathe of fresh air in the world of Event. Eventura will provide \nthe best solution in Sri lanka. Seat comforte and enjoy your life \ntime moments with us. ");
         jScrollPane1.setViewportView(description);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 97, 612, 64));
 
         event_list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sport ", "Musical", "Religious", "Drama", " " }));
         event_list.addActionListener(new java.awt.event.ActionListener() {
@@ -54,9 +61,11 @@ public class Eventregistration extends javax.swing.JFrame {
                 event_listActionPerformed(evt);
             }
         });
+        getContentPane().add(event_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 54, 387, -1));
 
         visit_label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         visit_label.setText("Visit Us!");
+        getContentPane().add(visit_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 480, -1, 24));
 
         site_button.setBackground(new java.awt.Color(0, 0, 0));
         site_button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -67,68 +76,18 @@ public class Eventregistration extends javax.swing.JFrame {
                 site_buttonActionPerformed(evt);
             }
         });
+        getContentPane().add(site_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, -1, -1));
 
         registration_button.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        registration_button.setText("Register your own evnt");
+        registration_button.setText("Register your own event");
         registration_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(site_button)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(registration_button, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(event_list, 0, 150, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(location_search, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(search_button)
-                                        .addGap(12, 12, 12))
-                                    .addComponent(jScrollPane1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)))))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addComponent(visit_label)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(67, 67, 67))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(event_list, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(location_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(search_button))
-                        .addGap(20, 20, 20)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(registration_button)
-                .addGap(18, 18, 18)
-                .addComponent(visit_label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(site_button)
-                .addContainerGap(65, Short.MAX_VALUE))
-        );
+        registration_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registration_buttonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(registration_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 170, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, 640, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,6 +99,10 @@ public class Eventregistration extends javax.swing.JFrame {
     private void site_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_site_buttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_site_buttonActionPerformed
+
+    private void registration_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registration_buttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registration_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,6 +142,7 @@ public class Eventregistration extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea description;
     private javax.swing.JComboBox<String> event_list;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField location_search;
