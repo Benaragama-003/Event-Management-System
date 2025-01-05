@@ -44,6 +44,7 @@ public class signin extends javax.swing.JFrame {
         email_signin = new javax.swing.JTextField();
         password_signin = new javax.swing.JPasswordField();
         signin_button = new javax.swing.JButton();
+        Type = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
 
@@ -84,15 +85,13 @@ public class signin extends javax.swing.JFrame {
             }
         });
 
+        Type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Organizer", "ADMIN" }));
+
         javax.swing.GroupLayout signuppanelLayout = new javax.swing.GroupLayout(signuppanel);
         signuppanel.setLayout(signuppanelLayout);
         signuppanelLayout.setHorizontalGroup(
             signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(signup_label)
-                .addGap(231, 231, 231))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
+            .addGroup(signuppanelLayout.createSequentialGroup()
                 .addContainerGap(181, Short.MAX_VALUE)
                 .addGroup(signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
@@ -103,18 +102,24 @@ public class signin extends javax.swing.JFrame {
                             .addGroup(signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(password)
                                 .addComponent(email_signin, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
-                                .addComponent(password_signin)))
+                                .addComponent(password_signin)
+                                .addComponent(Type, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(132, 132, 132))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
                         .addComponent(signin_button)
-                        .addGap(246, 246, 246))))
+                        .addGap(246, 246, 246))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
+                        .addComponent(signup_label)
+                        .addGap(223, 223, 223))))
         );
         signuppanelLayout.setVerticalGroup(
             signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(signuppanelLayout.createSequentialGroup()
-                .addGap(218, 218, 218)
+                .addGap(129, 129, 129)
                 .addComponent(signup_label)
-                .addGap(38, 38, 38)
+                .addGap(87, 87, 87)
+                .addComponent(Type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(email)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(email_signin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,6 +153,10 @@ public class signin extends javax.swing.JFrame {
 
     private void signin_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signin_buttonActionPerformed
         // TODO add your handling code here:
+        
+        
+        
+        
     }//GEN-LAST:event_signin_buttonActionPerformed
 
     /**
@@ -189,6 +198,7 @@ public class signin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Type;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel email;
     private javax.swing.JTextField email_signin;
