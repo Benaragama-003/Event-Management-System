@@ -89,7 +89,7 @@
                                   </Group>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="password" min="-2" max="-2" attributes="0"/>
-                                      <Component id="email_signin" pref="297" max="32767" attributes="0"/>
+                                      <Component id="E1" pref="297" max="32767" attributes="0"/>
                                       <Component id="password_signin" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Type" alignment="1" max="32767" attributes="0"/>
                                   </Group>
@@ -118,7 +118,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="email" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="email_signin" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="E1" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="password" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -155,7 +155,7 @@
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="email_signin">
+            <Component class="javax.swing.JTextField" name="E1">
             </Component>
             <Component class="javax.swing.JPasswordField" name="password_signin">
               <Events>

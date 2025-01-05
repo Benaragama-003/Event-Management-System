@@ -2,6 +2,11 @@ package event.mangement.system;
 
 
 import event.mangement.system.Dashboard;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 
 
 
@@ -41,7 +46,7 @@ public class signin extends javax.swing.JFrame {
         email = new javax.swing.JLabel();
         signup_label = new javax.swing.JLabel();
         password = new javax.swing.JLabel();
-        email_signin = new javax.swing.JTextField();
+        E1 = new javax.swing.JTextField();
         password_signin = new javax.swing.JPasswordField();
         signin_button = new javax.swing.JButton();
         Type = new javax.swing.JComboBox<>();
@@ -101,7 +106,7 @@ public class signin extends javax.swing.JFrame {
                                 .addGap(242, 242, 242))
                             .addGroup(signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(password)
-                                .addComponent(email_signin, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                                .addComponent(E1, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
                                 .addComponent(password_signin)
                                 .addComponent(Type, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(132, 132, 132))
@@ -122,7 +127,7 @@ public class signin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(email)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(email_signin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(E1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(password)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -153,6 +158,88 @@ public class signin extends javax.swing.JFrame {
 
     private void signin_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signin_buttonActionPerformed
         // TODO add your handling code here:
+        
+            String URL = "jdbc:mysql://127.0.0.1:3307/event_management";
+            String USER = "root";
+            String PASSWORD = "12345678Apb";
+        
+        
+        try{
+            
+            String sql="";
+            
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection c1=DriverManager.getConnection(URL, USER,PASSWORD);
+            
+            String role = Type.getSelectedItem().toString();
+            if(role=="User"){
+               sql = "SELECT UID,Position,Name FROM users WHERE Email = ? AND Password = ? AND Position = ? ";
+            }else if(role=="Organizer"){
+               sql = "SELECT OrgID,Position,Name FROM organizers WHERE Email = ? AND Password = ? AND Position = ? ";
+            }else if(role=="ADMIN"){
+               sql = "SELECT AdminID,Position,Name FROM admin WHERE Email = ? AND Password = ? AND Position = ? ";
+            }
+            
+            PreparedStatement st = c1.prepareStatement(sql);
+            
+            st.setString(1,E1.getText().trim());
+            st.setString(2, password_signin.getText().trim());
+            st.setString(3, Type.getSelectedItem().toString());
+            ResultSet resultSet = st.executeQuery();
+            
+            if (resultSet.next()){
+               
+              
+            
+               /* id=resultSet.getInt(1);
+                name=resultSet.getString(3);
+                System.out.println(name);
+                */
+                if(role=="User"){
+                    
+                User_Profile sM=new User_Profile();
+                this.setVisible(false);
+                sM.setVisible(true);
+                JOptionPane.showMessageDialog(null, "Successfully loged in !!!");
+                c1.close();
+            }
+               
+               else if(role=="ADMIN"){
+                Admin_Profile sI=new Admin_Profile();
+                this.setVisible(false);
+                sI.setVisible(true);
+                JOptionPane.showMessageDialog(null, "Successfully loged in !!!");
+                c1.close();
+            }
+                
+              else  if(role=="Organizer"){
+                Organizer_Profile sS=new Organizer_Profile();
+                this.setVisible(false);
+                sS.setVisible(true);
+                JOptionPane.showMessageDialog(null, "Successfully loged in !!!");
+                c1.close();
+            }
+                
+                
+               
+               
+               
+                
+                
+            }else{
+            
+            JOptionPane.showMessageDialog(null, "Failed to Log In");
+                c1.close();
+            }
+            
+        }
+        catch(Exception e){
+        
+            System.out.println(e);
+            
+        }
+        
+        
         
         
         
@@ -198,10 +285,10 @@ public class signin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField E1;
     private javax.swing.JComboBox<String> Type;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel email;
-    private javax.swing.JTextField email_signin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollBar jScrollBar2;

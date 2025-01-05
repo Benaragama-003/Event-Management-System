@@ -86,7 +86,7 @@ public class ADmin_signup extends javax.swing.JFrame {
         confirm_password.setText("Confirm Password");
 
         signup_label.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        signup_label.setText("Sign up");
+        signup_label.setText("Sign up Admin");
 
         password.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         password.setText("Password");
@@ -128,7 +128,7 @@ public class ADmin_signup extends javax.swing.JFrame {
         signuppanel.setLayout(signuppanelLayout);
         signuppanelLayout.setHorizontalGroup(
             signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
+            .addGroup(signuppanelLayout.createSequentialGroup()
                 .addContainerGap(149, Short.MAX_VALUE)
                 .addGroup(signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
@@ -155,18 +155,17 @@ public class ADmin_signup extends javax.swing.JFrame {
                         .addGap(132, 132, 132))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
                         .addComponent(sign_up)
-                        .addGap(246, 246, 246))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(signup_label)
-                .addGap(231, 231, 231))
+                        .addGap(246, 246, 246))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, signuppanelLayout.createSequentialGroup()
+                        .addComponent(signup_label)
+                        .addGap(170, 170, 170))))
         );
         signuppanelLayout.setVerticalGroup(
             signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(signuppanelLayout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addGap(106, 106, 106)
                 .addComponent(signup_label)
-                .addGap(70, 70, 70)
+                .addGap(69, 69, 69)
                 .addGroup(signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name)
                     .addComponent(name_signup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

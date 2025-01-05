@@ -98,7 +98,17 @@ drop column  contactNo;
 
 
 alter table users
-modify  column UID int AUTO_INCREMENT;
+add column position varchar(10) default 'User';
+
+
+alter table admin
+add column position varchar(15) default 'ADMIN';
+
+alter table organizers
+add column position varchar(10) default 'Organizer';
 
 alter table admin
 modify  column AdminID int AUTO_INCREMENT;
+
+
+
