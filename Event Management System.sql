@@ -90,3 +90,11 @@ CREATE TABLE ticket_pricing (
     Price DECIMAL(10, 2),
     FOREIGN KEY (EventID) REFERENCES event(EventID)
 );
+
+Drop table eventorganizers;
+Drop table eventadmin;
+drop table ticket_pricing;
+drop table tickets;
+alter table event
+modify  column EventID int AUTO_INCREMENT;
+
