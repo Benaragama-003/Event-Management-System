@@ -42,7 +42,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-          <BorderConstraints direction="Before"/>
+          <BorderConstraints direction="Center"/>
         </Constraint>
       </Constraints>
 
@@ -499,33 +499,17 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/1-bosPdDQFRABzby2p4wIp9g.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel11"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/1-bosPdDQFRABzby2p4wIp9g.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel11"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/1-bosPdDQFRABzby2p4wIp9g.png"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/1-bosPdDQFRABzby2p4wIp9g.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -565,8 +549,8 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Food-and-drinks-festivals-top-ch.png"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[220, 220]"/>
                 </Property>
               </Properties>
             </Component>
@@ -604,11 +588,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel14">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/st-brigids-fest8.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -648,9 +627,6 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/myfitnesspal-nourish-2022-exercise-class-600x450.jpg"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel10"/>
               </Properties>
             </Component>
@@ -699,11 +675,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel15">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Untitled-design-1.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -834,11 +805,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel22">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/find-hobby.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -874,11 +840,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel21">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/family-friendly-bbq-events-fun-activities-for-all-ages-lU.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -914,11 +875,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel23">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/iStock-540095978.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -954,11 +910,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel24">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/AAAS-Rafting.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1137,11 +1088,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel31">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Nelum-Pokuna-Mahinda-Rajapaksa-Theatre-1.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1180,11 +1126,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel32">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Cinnamon-Life-4.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1223,11 +1164,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel33">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/image_af1c336665.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1266,11 +1202,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel34">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/elphinstone-theatre.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1372,11 +1303,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel39">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Lotus-tower.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1412,11 +1338,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel40">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Taj_Samudra_Facade_S.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1453,9 +1374,6 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel41">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/art gallery.jpg"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel41"/>
               </Properties>
             </Component>
@@ -1493,11 +1411,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel42">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/360_F_586185858_o4IbhG2yHAyo0SCapYn0bRD15Gxc2QwY.jpg"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>

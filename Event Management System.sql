@@ -69,3 +69,32 @@ CREATE TABLE EventAdmin (
     FOREIGN KEY (AdminID) REFERENCES Admin(AdminID) ON DELETE CASCADE,
     FOREIGN KEY (EventID) REFERENCES Event(EventID) ON DELETE CASCADE
 );
+drop table tickets,usertickets;
+
+CREATE TABLE tickets (
+    TicketID INT AUTO_INCREMENT PRIMARY KEY,
+    EventID INT,
+    UserID INT,
+    TicketType VARCHAR(50), -- e.g., "VIP", "Standard", "Economy"
+    Price DECIMAL(10, 2),
+    IssuedDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (EventID) REFERENCES event(EventID),
+    FOREIGN KEY (UserID) REFERENCES users(UID)
+);
+
+
+CREATE TABLE ticket_pricing (
+    PricingID INT AUTO_INCREMENT PRIMARY KEY,
+    EventID INT,
+    TicketType VARCHAR(50), -- e.g., "VIP", "Standard", "Economy"
+    Price DECIMAL(10, 2),
+    FOREIGN KEY (EventID) REFERENCES event(EventID)
+);
+
+Drop table eventorganizers;
+Drop table eventadmin;
+drop table ticket_pricing;
+drop table tickets;
+alter table event
+modify  column EventID int AUTO_INCREMENT;
+
