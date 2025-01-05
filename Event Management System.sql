@@ -99,7 +99,7 @@ drop column  contactNo;
 
 alter table users
 add column position varchar(10) default 'User';
-
+delete from event;
 
 alter table admin
 add column position varchar(15) default 'ADMIN';
@@ -109,6 +109,5 @@ add column position varchar(10) default 'Organizer';
 
 alter table admin
 modify  column AdminID int AUTO_INCREMENT;
-
-
+delete from event;
 
