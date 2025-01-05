@@ -1,27 +1,24 @@
-package event.mangement.system;
-
-
-import event.mangement.system.Eventregistration;
-import event.mangement.system.Dashboard;
-
-
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+package event.mangement.system;
+import event.mangement.system.Eventregistration;
+import event.mangement.system.Dashboard;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 /**
  *
- * @author LENOVO
+ * @author Akila Benaragama
  */
-public class signup extends javax.swing.JFrame {
+public class User_Signup extends javax.swing.JFrame {
 
     /**
-     * Creates new form Dashboard
+     * Creates new form User_Signup
      */
-    public signup() {
-       
+    public User_Signup() {
         initComponents();
     }
 
@@ -34,9 +31,6 @@ public class signup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jScrollBar2 = new javax.swing.JScrollBar();
-        jScrollBar3 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
         signuppanel = new javax.swing.JPanel();
         name_signup = new javax.swing.JTextField();
@@ -52,10 +46,8 @@ public class signup extends javax.swing.JFrame {
         sign_up = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(254, 248, 243));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -137,7 +129,7 @@ public class signup extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, signuppanelLayout.createSequentialGroup()
                                 .addComponent(confirm_password)
                                 .addGap(18, 18, 18)
-                                .addComponent(confirm_password_signup, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
+                                .addComponent(confirm_password_signup, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, signuppanelLayout.createSequentialGroup()
                                 .addGroup(signuppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(password)
@@ -192,12 +184,26 @@ public class signup extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/eventura-high-resolution-logo.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jScrollPane3.setMaximumSize(new java.awt.Dimension(3, 3));
-        jScrollPane3.setPreferredSize(new java.awt.Dimension(1210, 768));
-        jScrollPane3.setVerticalScrollBar(jScrollBar2);
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1220, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 768, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,21 +215,62 @@ public class signup extends javax.swing.JFrame {
         register.setVisible(true);
     }//GEN-LAST:event_name_signupActionPerformed
 
+    private void confirm_password_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirm_password_signupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_confirm_password_signupActionPerformed
+
     private void password_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_password_signupActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_password_signupActionPerformed
 
     private void sign_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sign_upActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_sign_upActionPerformed
+        String Name,Password,C_Password,email,pss="";
+        Name =name_signup.getText();
+        email=email_signup.getText();
+        Password= password_signup.getText();
+        C_Password= confirm_password_signup.getText();
 
-    private void confirm_password_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirm_password_signupActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_confirm_password_signupActionPerformed
+        if(Password.equals(C_Password)){
+            pss=Password;
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Please Try Again!!!");
+            password_signup.setText("");
+            confirm_password_signup.setText("");
+        }
+
+        String URL = "jdbc:mysql://127.0.0.1:3307/event_management";
+        String USER = "root";
+        String PASSWORD = "12345678Apb";
+
+        try{
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection c2=DriverManager.getConnection(URL, USER,PASSWORD);
+
+            String sql = "INSERT INTO users (Name,Email,password) VALUES (?, ?, ?)";
+            PreparedStatement stmt = c2.prepareStatement(sql);
+            stmt.setString(1, Name);
+            stmt.setString(2, email);
+            stmt.setString(3, pss);
+
+            stmt.executeUpdate();
+            c2.close();
+
+            JOptionPane.showMessageDialog(null, "You Registered Succesfully !!! ,Now please log in");
+        }
+        catch(Exception e){
+
+            System.out.println(e);
+
+        }
+
+    }//GEN-LAST:event_sign_upActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-                Dashboard signup = new Dashboard ();
+        Dashboard signup = new Dashboard ();
         setVisible(false);
         signup.setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
@@ -232,9 +279,6 @@ public class signup extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-        
-        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -248,26 +292,25 @@ public class signup extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(User_Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(User_Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(User_Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(User_Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new signup().setVisible(true);
+                new User_Signup().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel confirm_password;
     private javax.swing.JPasswordField confirm_password_signup;
     private javax.swing.JLabel email;
@@ -275,9 +318,6 @@ public class signup extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollBar jScrollBar2;
-    private javax.swing.JScrollBar jScrollBar3;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel name;
     private javax.swing.JTextField name_signup;
     private javax.swing.JLabel password;

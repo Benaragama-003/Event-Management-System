@@ -97,4 +97,10 @@ drop table ticket_pricing;
 drop table tickets;
 alter table event
 modify  column EventID int AUTO_INCREMENT;
+alter table organizers
+modify  column OrgID int AUTO_INCREMENT;
+Alter table admin
+drop column  contactNo;
 
+alter table admin
+modify  column AdminID int AUTO_INCREMENT;
