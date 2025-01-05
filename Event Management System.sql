@@ -36,12 +36,6 @@ CREATE TABLE Users (
     Password VARCHAR(50)
 );
 
--- Creating the Tickets table
-CREATE TABLE Tickets (
-    TicketID INT PRIMARY KEY,
-    Price DECIMAL(10, 2),
-    SeatNo INT
-);
 
 -- Creating the UserTickets table to link Users with Tickets
 CREATE TABLE UserTickets (
@@ -101,6 +95,10 @@ alter table organizers
 modify  column OrgID int AUTO_INCREMENT;
 Alter table admin
 drop column  contactNo;
+
+
+alter table users
+modify  column UID int AUTO_INCREMENT;
 
 alter table admin
 modify  column AdminID int AUTO_INCREMENT;
