@@ -9,12 +9,12 @@
  *
  * @author LENOVO
  */
-public class Event_creation extends javax.swing.JFrame {
+public class Event_update extends javax.swing.JFrame {
 
     /**
      * Creates new form Dashboard
      */
-    public Event_creation() {
+    public Event_update() {
        
         initComponents();
     }
@@ -31,7 +31,6 @@ public class Event_creation extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollBar2 = new javax.swing.JScrollBar();
         jScrollBar3 = new javax.swing.JScrollBar();
-        jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -39,6 +38,7 @@ public class Event_creation extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         eventcreationpanel = new javax.swing.JPanel();
         signup_label = new javax.swing.JLabel();
         er_createbtn = new javax.swing.JButton();
@@ -49,24 +49,18 @@ public class Event_creation extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        er_id = new javax.swing.JTextField();
-        er_name = new javax.swing.JTextField();
-        er_date = new javax.swing.JTextField();
-        er_cat = new javax.swing.JComboBox<>();
-        er_loc = new javax.swing.JTextField();
-        er_des = new javax.swing.JTextField();
+        ue_id = new javax.swing.JTextField();
+        ue_name = new javax.swing.JTextField();
+        ue_date = new javax.swing.JTextField();
+        ue_pay = new javax.swing.JTextField();
+        ue_cat = new javax.swing.JComboBox<>();
+        ue_loc = new javax.swing.JTextField();
         er_createbtn1 = new javax.swing.JButton();
+        ue_des = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        er_pay = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setBackground(new java.awt.Color(254, 248, 243));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setMaximumSize(new java.awt.Dimension(800, 650));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1220, 768));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(160, 153, 121));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -140,18 +134,24 @@ public class Event_creation extends javax.swing.JFrame {
                 .addGap(31, 31, 31))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 100));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 100));
+
+        jPanel1.setBackground(new java.awt.Color(254, 248, 243));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setMaximumSize(new java.awt.Dimension(800, 650));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1220, 768));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         eventcreationpanel.setBackground(new java.awt.Color(255, 255, 255));
         eventcreationpanel.setPreferredSize(new java.awt.Dimension(1210, 768));
 
         signup_label.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        signup_label.setText("  Event Registration");
+        signup_label.setText("Update Event");
 
         er_createbtn.setBackground(new java.awt.Color(0, 153, 0));
         er_createbtn.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         er_createbtn.setForeground(new java.awt.Color(255, 255, 255));
-        er_createbtn.setText("Create");
+        er_createbtn.setText("Update");
         er_createbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 er_createbtnActionPerformed(evt);
@@ -179,26 +179,32 @@ public class Event_creation extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jLabel8.setText("Event ID");
 
-        er_id.addActionListener(new java.awt.event.ActionListener() {
+        ue_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                er_idActionPerformed(evt);
+                ue_idActionPerformed(evt);
             }
         });
 
-        er_name.addActionListener(new java.awt.event.ActionListener() {
+        ue_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                er_nameActionPerformed(evt);
+                ue_nameActionPerformed(evt);
             }
         });
 
-        er_date.addActionListener(new java.awt.event.ActionListener() {
+        ue_date.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                er_dateActionPerformed(evt);
+                ue_dateActionPerformed(evt);
             }
         });
 
-        er_cat.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        er_cat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sport", "Musical", "Religious", "Drama", " " }));
+        ue_pay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ue_payActionPerformed(evt);
+            }
+        });
+
+        ue_cat.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ue_cat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sport", "Musical", "Religious", "Drama", " " }));
 
         er_createbtn1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         er_createbtn1.setText("Cancel");
@@ -213,72 +219,79 @@ public class Event_creation extends javax.swing.JFrame {
         eventcreationpanelLayout.setHorizontalGroup(
             eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eventcreationpanelLayout.createSequentialGroup()
-                .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(eventcreationpanelLayout.createSequentialGroup()
-                        .addGap(125, 125, 125)
+                        .addGap(185, 185, 185)
                         .addComponent(signup_label))
-                    .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, eventcreationpanelLayout.createSequentialGroup()
-                            .addGap(84, 84, 84)
-                            .addComponent(er_createbtn)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(er_createbtn1))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, eventcreationpanelLayout.createSequentialGroup()
-                            .addGap(61, 61, 61)
-                            .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(er_loc, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(er_date, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(er_name, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(er_id, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(er_cat, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(er_des, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(eventcreationpanelLayout.createSequentialGroup()
+                        .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(eventcreationpanelLayout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eventcreationpanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ue_loc, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ue_pay, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ue_date, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ue_name, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ue_id, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ue_cat, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ue_des, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, eventcreationpanelLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(er_createbtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(er_createbtn1)))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
         eventcreationpanelLayout.setVerticalGroup(
             eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(eventcreationpanelLayout.createSequentialGroup()
-                .addGap(170, 170, 170)
+                .addGap(161, 161, 161)
                 .addComponent(signup_label)
-                .addGap(39, 39, 39)
+                .addGap(48, 48, 48)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(er_id, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ue_id, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(er_name, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ue_name, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(er_date, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ue_date, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ue_pay, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(er_cat, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ue_cat, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(er_loc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ue_loc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(er_des, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ue_des, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(eventcreationpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(er_createbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(er_createbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54))
+                .addGap(37, 37, 37))
         );
 
         jPanel1.add(eventcreationpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 770));
@@ -290,13 +303,6 @@ public class Event_creation extends javax.swing.JFrame {
         jScrollPane3.setVerticalScrollBar(jScrollBar2);
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        er_pay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                er_payActionPerformed(evt);
-            }
-        });
-        getContentPane().add(er_pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 790, 298, 38));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -304,21 +310,21 @@ public class Event_creation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_er_createbtnActionPerformed
 
-    private void er_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_er_idActionPerformed
+    private void ue_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ue_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_er_idActionPerformed
+    }//GEN-LAST:event_ue_idActionPerformed
 
-    private void er_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_er_nameActionPerformed
+    private void ue_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ue_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_er_nameActionPerformed
+    }//GEN-LAST:event_ue_nameActionPerformed
 
-    private void er_dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_er_dateActionPerformed
+    private void ue_dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ue_dateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_er_dateActionPerformed
+    }//GEN-LAST:event_ue_dateActionPerformed
 
-    private void er_payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_er_payActionPerformed
+    private void ue_payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ue_payActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_er_payActionPerformed
+    }//GEN-LAST:event_ue_payActionPerformed
 
     private void er_createbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_er_createbtn1ActionPerformed
         // TODO add your handling code here:
@@ -357,22 +363,15 @@ public class Event_creation extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Event_creation().setVisible(true);
+                new Event_update().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> er_cat;
     private javax.swing.JButton er_createbtn;
     private javax.swing.JButton er_createbtn1;
-    private javax.swing.JTextField er_date;
-    private javax.swing.JTextField er_des;
-    private javax.swing.JTextField er_id;
-    private javax.swing.JTextField er_loc;
-    private javax.swing.JTextField er_name;
-    private javax.swing.JTextField er_pay;
     private javax.swing.JPanel eventcreationpanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
@@ -393,5 +392,12 @@ public class Event_creation extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar3;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel signup_label;
+    private javax.swing.JComboBox<String> ue_cat;
+    private javax.swing.JTextField ue_date;
+    private javax.swing.JTextField ue_des;
+    private javax.swing.JTextField ue_id;
+    private javax.swing.JTextField ue_loc;
+    private javax.swing.JTextField ue_name;
+    private javax.swing.JTextField ue_pay;
     // End of variables declaration//GEN-END:variables
 }
