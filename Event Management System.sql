@@ -106,8 +106,13 @@ add column position varchar(15) default 'ADMIN';
 
 alter table organizers
 add column position varchar(10) default 'Organizer';
+alter table event
 
+add column Ticket_Quantity varchar(10);
+add column position varchar(10) default 'Organizer';
 alter table admin
 modify  column AdminID int AUTO_INCREMENT;
 delete from event;
+
+
 
